@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
@@ -23,16 +22,16 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
-  { path: 'designs', component: DesignGalleryComponent },
-  { path: 'designer', component: CustomDesignerComponent, canActivate: [AuthGuard] },
+  { path: 'designgallery', component: DesignGalleryComponent },
+  { path: 'customdesigner', component: CustomDesignerComponent, canActivate: [AuthGuard] },
 
-  { path: 'ar-preview/:id', component: ARPreviewComponent },
+  { path: 'arpreview/:id', component: ARPreviewComponent },
 
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] },
 
   { path: 'profile', component: UserProfileComponent, canActivate: [AuthGuard] },
-  { path: 'order-history', component: OrderHistoryComponent, canActivate: [AuthGuard] },
+  { path: 'orderhistory', component: OrderHistoryComponent, canActivate: [AuthGuard] },
 
   { path: 'admin', component: AdminPanelComponent, canActivate: [AuthGuard, AdminGuard] },
 

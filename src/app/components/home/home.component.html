@@ -1,1 +1,14 @@
-<p>home works!</p>
+<div class="home-container">
+
+  <h2>Trending Ethnic Wear</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card" *ngFor="let item of products">
+      <img [src]="item.image" alt="{{item.name}}">
+      <h3>{{item.name}}</h3>
+    </div>
+
+  </div>
+
+</div>

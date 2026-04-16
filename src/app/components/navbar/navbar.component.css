@@ -1,0 +1,55 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1976d2;
+  padding: 12px 20px;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Links container */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Individual links */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 8px;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+
+/* Active route */
+.nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+/* Main content area */
+.content {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #f4f4f4;
+  font-weight: 500;
+}

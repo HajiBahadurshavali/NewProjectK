@@ -1,3 +1,41 @@
-<app-root></app-root>
-<app-home></app-home>
-<app-admin-panel></app-admin-panel>
+<!-- <header class="navbar">
+
+  <div class="logo">
+    <h2>EthnicWear</h2>
+  </div>
+
+  <nav class="nav-links">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/cart" routerLinkActive="active">Cart</a>
+    <a routerLink="/checkout" routerLinkActive="active">Checkout</a>
+    <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  </nav>
+
+</header>
+
+<main class="content"> -->
+
+  <!-- Angular loads pages here -->
+ <!-- <router-outlet></router-outlet>
+
+</main>
+
+<footer class="footer">
+
+  <p>© 2026 EthnicWear. All rights reserved.</p>
+
+</footer> -->
+
+<!-- Navbar -->
+
+
+<app-navbar></app-navbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  © 2026 EthnicWear - All Rights Reserved
+</footer>
