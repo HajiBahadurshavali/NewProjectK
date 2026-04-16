@@ -1,0 +1,56 @@
+<div class="register-container">
+  <div class="register-card">
+    <h2>Create Your Account</h2>
+    
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName">
+          <mat-error>First name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName">
+          <mat-error>Last name is required</mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email">
+        <mat-error *ngIf="f['email'].hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="f['email'].hasError('email')">Invalid email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneNumber" type="tel" placeholder="10-digit number">
+        <mat-error>Valid 10-digit phone number required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+        <mat-error *ngIf="f['password'].hasError('required')">Password is required</mat-error>
+        <mat-error *ngIf="f['password'].hasError('minlength')">Minimum 8 characters</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput formControlName="confirmPassword" type="password">
+        <mat-error *ngIf="f['confirmPassword'].hasError('passwordMismatch')">Passwords don't match</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="loading">
+        <span *ngIf="!loading">Register</span>
+        <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+      </button>
+    </form>
+
+    <p class="login-link">
+      Already have an account? <a routerLink="/login">Login here</a>
+    </p>
+  </div>
+</div>

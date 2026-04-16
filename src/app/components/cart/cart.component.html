@@ -1,0 +1,70 @@
+<div class="cart-container">
+  <h2>Shopping Cart</h2>
+
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <p>Your cart is empty</p>
+    <button mat-raised-button color="primary" (click)="continueShopping()">
+      Continue Shopping
+    </button>
+  </div>
+
+  <div *ngIf="cartItems.length > 0" class="cart-content">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>
+            <div class="product-info">
+              <img [src]="item.imageUrl" [alt]="item.name">
+              <span>{{ item.name }}</span>
+            </div>
+          </td>
+          <td>₹{{ item.price }}</td>
+          <td>
+            <input type="number" [value]="item.quantity" 
+                  (change)="updateQuantity(item.id, $event)"
+                   min="1">
+          </td>
+          <td>₹{{ item.price * item.quantity }}</td>
+          <td>
+            <button mat-icon-button color="warn" (click)="removeItem(item.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      <div class="summary-row">
+        <strong>Subtotal:</strong>
+        <span>₹{{ total }}</span>
+      </div>
+      <div class="summary-row">
+        <strong>Shipping:</strong>
+        <span>Free</span>
+      </div>
+      <div class="summary-row total">
+        <strong>Total:</strong>
+        <span>₹{{ total }}</span>
+      </div>
+
+      <div class="checkout-actions">
+        <button mat-raised-button (click)="continueShopping()">
+          Continue Shopping
+        </button>
+        <button mat-raised-button color="primary" (click)="proceedToCheckout()">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

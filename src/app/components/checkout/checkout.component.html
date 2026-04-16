@@ -1,0 +1,60 @@
+<div class="checkout-container">
+  <div class="checkout-content">
+    <div class="checkout-form">
+      <h2>Shipping Information</h2>
+      
+      <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Shipping Address</mat-label>
+          <input matInput formControlName="shippingAddress" placeholder="House no., Street name">
+          <mat-error>Address is required</mat-error>
+        </mat-form-field>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <input matInput formControlName="shippingCity">
+            <mat-error>City is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>State</mat-label>
+            <input matInput formControlName="shippingState">
+            <mat-error>State is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Zip Code</mat-label>
+            <input matInput formControlName="shippingZipCode" placeholder="6-digit code">
+            <mat-error>Valid 6-digit zip code required</mat-error>
+          </mat-form-field>
+        </div>
+
+        <h2>Payment Method</h2>
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Select Payment Method</mat-label>
+          <mat-select formControlName="paymentMethod">
+            <mat-option value="razorpay">Razorpay (Credit/Debit Card, UPI)</mat-option>
+            <mat-option value="netbanking">Net Banking</mat-option>
+            <mat-option value="wallet">Digital Wallet</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="loading">
+          <span *ngIf="!loading">Place Order & Pay (₹{{ cartTotal }})</span>
+          <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+        </button>
+      </form>
+    </div>
+
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-details">
+        <p><strong>Subtotal:</strong> ₹{{ cartTotal }}</p>
+        <p><strong>Shipping:</strong> Free</p>
+        <p class="total"><strong>Total Amount:</strong> ₹{{ cartTotal }}</p>
+      </div>
+    </div>
+  </div>
+</div>

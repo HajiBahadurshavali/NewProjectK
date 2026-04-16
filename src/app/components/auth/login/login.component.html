@@ -1,0 +1,30 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login to Your Account</h2>
+    
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" placeholder="Enter your email">
+        <mat-error *ngIf="f['email'].hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="f['email'].hasError('email')">Please enter a valid email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" placeholder="Enter your password">
+        <mat-error *ngIf="f['password'].hasError('required')">Password is required</mat-error>
+        <mat-error *ngIf="f['password'].hasError('minlength')">Password must be at least 8 characters</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="loading">
+        <span *ngIf="!loading">Login</span>
+        <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+      </button>
+    </form>
+
+    <p class="signup-link">
+      Don't have an account? <a routerLink="/register">Create one here</a>
+    </p>
+  </div>
+</div>

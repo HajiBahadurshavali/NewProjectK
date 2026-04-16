@@ -1,0 +1,32 @@
+<div class="admin-panel">
+  <h2>Admin Dashboard</h2>
+<!-- added comments -->
+  <div class="tabs">
+    <button [class.active]="activeTab === 'orders'" (click)="switchTab('orders')">
+      Orders
+    </button>
+    <button [class.active]="activeTab === 'designs'" (click)="switchTab('designs')">
+      Designs
+    </button>
+    <button [class.active]="activeTab === 'users'" (click)="switchTab('users')">
+      Users
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <div *ngIf="activeTab === 'orders'" class="orders-tab">
+      <h3>All Orders</h3>
+      <!-- Orders management UI -->
+    </div>
+
+    <div *ngIf="activeTab === 'designs'" class="designs-tab">
+      <h3>All Designs</h3>
+      <!-- Designs management UI -->
+    </div>
+
+    <div *ngIf="activeTab === 'users'" class="users-tab">
+      <h3>Users</h3>
+      <!-- Users management UI -->
+    </div>
+  </div>
+</div>
