@@ -9,23 +9,27 @@ export class HomeComponent {
  products = [
     {
       name: 'Silk Saree',
-      image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c'
+      image: 'https://images.unsplash.com/photo-1727430228383-aa1fb59db8bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhcmVlc3xlbnwwfHwwfHx8MA%3D%3D.unsplash.com/photo-1610030469983-98e550d6193c'
     },
     {
       name: 'Designer Saree',
-      image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf'
+      image: 'https://media.istockphoto.com/id/2072342092/photo/handmade-indian-sari-saree-with-golden-details-woman-wear-on-festival-ceremony-and-weddings.webp?a=1&b=1&s=612x612&w=0&k=20&c=fNsizNQbds8qt-uiXGsfdNiSumguCaZhizKTAIo-UTQ='
+    },
+    {
+      name: 'Cotten Saree',
+      image: 'https://static.vecteezy.com/system/resources/thumbnails/070/420/280/small/vibrant-silk-sarees-elegantly-arranged-with-candles-free-photo.jpg'
     },
     {
       name: 'Bridal Lehenga',
-      image: 'https://images.unsplash.com/photo-1593032465171-8d3c8f9f0d02'
+      image: 'https://www.freepik.com/premium-ai-image/elegant-woman-turquoise-silk-saree_418671470.htm#fromView=keyword&page=1&position=46&uuid=69e62636-8f48-48e6-88e4-77c80639cdf2&query=Saree'
     },
     {
       name: 'Anarkali Dress',
-      image: 'https://images.unsplash.com/photo-1622295023453-8c1e3b9c7cdb'
+      image: 'https://example.com/anarkali-dress.jpg'
     },
     {
       name: 'Party Wear Saree',
-      image: 'https://images.unsplash.com/photo-1602810318660-d2c46b750b2d'
+      image: 'https://www.freepik.com/premium-photo/new-saree-is-made-from-cotton-has-green-border_43863488.htm#fromView=keyword&page=2&position=37&uuid=69e62636-8f48-48e6-88e4-77c80639cdf2&query=Saree'
     },
     {
       name: 'Traditional Kurti',

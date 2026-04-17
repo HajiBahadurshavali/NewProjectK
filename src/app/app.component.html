@@ -29,13 +29,21 @@
 
 <!-- Navbar -->
 
+ <!-- <header class="navbar">
 
+  <div class="logo">
+    <h2>EthnicWear</h2>
+  </div>
+  </header> -->
 <app-navbar></app-navbar>
 
-<div class="content">
-  <router-outlet></router-outlet>
-</div>
+<div class="app-layout">
 
-<footer class="footer">
-  © 2026 EthnicWear - All Rights Reserved
-</footer>
+  <app-sidebar></app-sidebar>
+
+  <div class="content-area">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+
+</div>

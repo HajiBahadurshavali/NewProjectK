@@ -1,0 +1,21 @@
+<div class="sidebar">
+
+  <h3>Categories</h3>
+
+  <ul>
+    <li *ngFor="let category of categories">
+      <a routerLink="/designs">{{category}}</a>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h3>Quick Links</h3>
+
+  <ul>
+    <li><a routerLink="/cart">My Cart</a></li>
+    <li><a routerLink="/order-history">Orders</a></li>
+    <li><a routerLink="/profile">Profile</a></li>
+  </ul>
+
+</div>

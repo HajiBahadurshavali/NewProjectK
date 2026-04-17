@@ -28,3 +28,49 @@
   padding: 15px;
   background: #f4f4f4;
 }
+.layout {
+  display: flex;
+  min-height: 80vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+/* GLOBAL LAYOUT */
+
+.app-layout {
+  display: flex;
+}
+
+/* NAVBAR FIXED */
+
+app-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* SIDEBAR FIXED */
+
+app-sidebar {
+  position: fixed;
+  top: 60px;        /* height of navbar */
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+/* CONTENT AREA SCROLLABLE */
+
+.content-area {
+  margin-left: 220px;   /* sidebar width */
+  margin-top: 60px;     /* navbar height */
+  padding: 20px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  width: 100%;
+}

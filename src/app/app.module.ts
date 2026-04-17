@@ -18,6 +18,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { AdminPanelComponent } from './components/admin/admin-panel/admin-panel.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -46,7 +48,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     CheckoutComponent,
     UserProfileComponent,
     OrderHistoryComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    SidebarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
