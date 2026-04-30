@@ -1,0 +1,22 @@
+/* 🔍 Search bar styling */
+input:focus {
+  box-shadow: none;
+}
+
+/* 🛍️ Product card hover effect */
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 15px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 📱 Mobile spacing */
+@media (max-width: 576px) {
+  .input-group {
+    margin: 0 10px;
+  }
+}

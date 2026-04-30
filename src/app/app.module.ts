@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 /* Components */
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -57,6 +58,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
@@ -71,7 +73,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatProgressBarModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent]
 })
